@@ -21,7 +21,7 @@ const socials = [
   {
     icon: Globe,
     label: "Portfolio",
-    href: "https://gauriiiiiiiiiiii.github.io/Portfolio/",
+    href: "https://portfolioo-9fr6wq5lm-gauris-projects-110ad775.vercel.app/",
   },
   {
     icon: Instagram,
