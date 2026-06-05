@@ -21,10 +21,6 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-20 -right-40 h-[500px] w-[500px] rounded-full bg-[oklch(0.72_0.28_330/0.10)] blur-[110px]" />
       <div className="pointer-events-none absolute -bottom-40 left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-[oklch(0.62_0.26_290/0.10)] blur-[120px]" />
 
-      <div
-        className="pointer-events-none absolute left-0 right-0 h-[2px] animate-scan z-20"
-        style={{ background: "linear-gradient(90deg, transparent, oklch(0.87 0.22 195 / 0.4), oklch(0.72 0.28 330 / 0.4), transparent)" }}
-      />
 
       <motion.div
         style={{ opacity }}
