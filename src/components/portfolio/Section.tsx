@@ -17,7 +17,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative mx-auto w-full max-w-6xl px-6 py-28 md:py-36 ${className}`}
+      className={`relative mx-auto w-full max-w-6xl px-6 py-16 md:py-24 ${className}`}
     >
       {(eyebrow || title) && (
         <motion.header
@@ -28,7 +28,7 @@ export function Section({
           className="mb-14 md:mb-20"
         >
           {eyebrow && (
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary/80">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-neon-cyan">
               {eyebrow}
             </p>
           )}
@@ -36,6 +36,15 @@ export function Section({
             <h2 className="mt-4 font-display text-4xl md:text-6xl font-light leading-[1.05] tracking-tight">
               <span className="text-gradient">{title}</span>
             </h2>
+          )}
+          {title && (
+            <div
+              className="mt-4 h-px w-24"
+              style={{
+                background:
+                  "linear-gradient(90deg, oklch(0.87 0.22 195), oklch(0.72 0.28 330), oklch(0.62 0.26 290), transparent)",
+              }}
+            />
           )}
         </motion.header>
       )}

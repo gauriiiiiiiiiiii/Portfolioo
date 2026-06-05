@@ -17,13 +17,21 @@ export function Nav() {
       transition={{ duration: 0.8, delay: 0.3 }}
       className="fixed top-4 left-1/2 z-50 -translate-x-1/2"
     >
-      <div className="glass rounded-full px-3 py-2 flex items-center gap-1 shadow-soft">
+      <div className="glass-neon rounded-full px-3 py-2 flex items-center gap-1 shadow-soft">
+        {/* Neon top-edge shimmer */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-full"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, oklch(0.87 0.22 195 / 0.6), oklch(0.72 0.28 330 / 0.6), oklch(0.62 0.26 290 / 0.6), transparent)",
+          }}
+        />
         <ul className="hidden md:flex items-center gap-1">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-primary/10"
+                className="px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors rounded-full hover:bg-neon-cyan/8"
               >
                 {l.label}
               </a>
@@ -32,7 +40,7 @@ export function Nav() {
         </ul>
         <a
           href="#contact"
-          className="ml-1 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground hover:opacity-90 transition"
+          className="btn-neon ml-1 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide"
         >
           Say hi
         </a>
