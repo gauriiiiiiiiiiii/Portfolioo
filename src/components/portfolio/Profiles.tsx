@@ -6,7 +6,7 @@ const socials = [
   {
     icon: FileText,
     label: "Resume",
-    href: "https://shorturl.at/81kQP",
+    href: "https://drive.google.com/file/d/19qVf7kGTVGBODiCw8or7RseXU1cAoD7A/view",
   },
   {
     icon: Linkedin,
@@ -21,7 +21,7 @@ const socials = [
   {
     icon: Globe,
     label: "Portfolio",
-    href: "https://portfolioo-9fr6wq5lm-gauris-projects-110ad775.vercel.app/",
+    href: "https://portfolioo-five-blond.vercel.app/",
   },
   {
     icon: Instagram,

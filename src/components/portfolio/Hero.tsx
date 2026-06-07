@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import heroImg from "@/assets/hero-developer.jpg";
+import heroImg from "@/assets/hero-developerr.png";
 import { Starfield } from "./Starfield";
 import { FloatingCode } from "./FloatingCode";
 import { TypingText } from "./TypingText";
@@ -102,7 +102,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-[2rem] glow-ring animate-float">
             <img
               src={heroImg}
-              alt="Illustration of Gauri coding at her cozy desk"
+              alt="Gauri — software developer"
               width={1024}
               height={1024}
               className="w-full h-auto"

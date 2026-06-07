@@ -39,7 +39,7 @@ export function Resume() {
 
           <div className="flex flex-col gap-3">
             <a
-              href="https://shorturl.at/81kQP"
+              href="https://drive.google.com/file/d/19qVf7kGTVGBODiCw8or7RseXU1cAoD7A/view"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow hover:shadow-[0_0_60px_-5px_var(--glow)] transition-all"

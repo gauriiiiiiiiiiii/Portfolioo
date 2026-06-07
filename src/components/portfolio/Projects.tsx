@@ -4,13 +4,12 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "FactorLens",
-    tag: "Python · Scikit-learn · XGBoost · Streamlit",
-    href: "https://github.com/gauriiiiiiiiiiii/FactorLens",
+    title: "EtcdLockMaster",
+    tag: "Python · etcd · Raft Consensus · gRPC · Docker",
+    href: "https://github.com/gauriiiiiiiiiiii/EtcdLockMaster",
     bullets: [
-      "Constructed an end-to-end financial pipeline analyzing 90+ years of multi-source market time-series datasets",
-      "Trained supervised ML models (LASSO, Random Forest, XGBoost) identifying systematic signals driving equity returns",
-      "Computed interpretable financial metrics (alpha, beta, R², residual variance) across 100+ securities",
+      "Developed a distributed locking library on etcd using atomic CAS transactions and lease-based TTL expiry — mutual exclusion over a 3-node Raft cluster with automatic crash recovery",
+      "Resolved 3 race conditions in watch ordering, timeout handling, and thread state leakage; validated via 12-test suite covering re-entrancy, auto-renewal, and cross-node exclusivity",
     ],
     neon: "cyan",
     orb: "oklch(0.87 0.22 195 / 0.18)",
@@ -19,16 +18,17 @@ const projects = [
     label: "text-neon-cyan",
     dot: "bg-[oklch(0.87_0.22_195)]",
     pulse: "animate-neon-pulse-cyan",
-    cmd: "factorLens.analyze()",
+    shimmer: "linear-gradient(90deg, transparent, oklch(0.87 0.22 195 / 0.8), transparent)",
+    terminalBorder: "oklch(0.87 0.22 195 / 0.2)",
+    cmd: "etcdLock.acquire()",
   },
   {
     title: "OuttaCouch",
-    tag: "Next.js · Prisma · PostgreSQL · Supabase",
+    tag: "Next.js · PostgreSQL · Prisma · Socket.io · Supabase",
     href: "https://github.com/gauriiiiiiiiiiii/OuttaCouch",
     bullets: [
-      "Built an event-first social platform enabling location-aware discovery & networking through shared events",
-      "Engineered a scalable PostgreSQL schema via Prisma managing users, events, messaging & social connections",
-      "Implemented OTP authentication with NextAuth while integrating Supabase storage for media uploads",
+      "Architected a full-stack social platform on Next.js 15 — 20+ REST APIs, 15+ relational entities, live messaging (Socket.io), QR ticketing, referral onboarding, location-aware scoring, and host analytics",
+      "Secured with JWT, OTP via Twilio & Resend, CSRF protection, rate limiting, and role-based auth; patched 9 bugs including 3 security vulnerabilities via self-conducted audit",
     ],
     neon: "pink",
     orb: "oklch(0.72 0.28 330 / 0.18)",
@@ -37,16 +37,17 @@ const projects = [
     label: "text-neon-pink",
     dot: "bg-[oklch(0.72_0.28_330)]",
     pulse: "animate-neon-pulse-pink",
+    shimmer: "linear-gradient(90deg, transparent, oklch(0.72 0.28 330 / 0.8), transparent)",
+    terminalBorder: "oklch(0.72 0.28 330 / 0.2)",
     cmd: "outtaCouch.discover()",
   },
   {
-    title: "Customer Churn Analytics",
-    tag: "Python · FastAPI · Streamlit · Scikit-learn",
-    href: "https://github.com/gauriiiiiiiiiiii/CustomerChurnAnalytics",
+    title: "FactorLens",
+    tag: "Python · Scikit-learn · XGBoost · Streamlit · Plotly",
+    href: "https://github.com/gauriiiiiiiiiiii/FactorLens",
     bullets: [
-      "Engineered a production ML system delivering real-time churn predictions via API-based inference",
-      "Modeled customer behavior using RFM features across 15+ attributes for improved interpretability",
-      "Formulated a decision layer generating retention strategies across multiple churn-risk segments",
+      "Constructed a quantitative equity factor pipeline over 266K rows, 264 tickers — 15 cross-sectional factors, z-score normalization, and as-of merge on fundamentals to eliminate look-ahead bias",
+      "Trained LASSO, RF, XGBoost on chronological 80/20 split to extract alpha signals; evaluated via Spearman IC, Sharpe ratio, and max drawdown across long-short portfolios",
     ],
     neon: "violet",
     orb: "oklch(0.62 0.26 290 / 0.18)",
@@ -55,7 +56,28 @@ const projects = [
     label: "text-neon-violet",
     dot: "bg-[oklch(0.62_0.26_290)]",
     pulse: "animate-neon-pulse-violet",
-    cmd: "churn.predict(customer)",
+    shimmer: "linear-gradient(90deg, transparent, oklch(0.62 0.26 290 / 0.8), transparent)",
+    terminalBorder: "oklch(0.62 0.26 290 / 0.2)",
+    cmd: "factorLens.analyze()",
+  },
+  {
+    title: "SemanticShelf",
+    tag: "Python · Sentence-Transformers · ChromaDB · Streamlit",
+    href: "https://github.com/gauriiiiiiiiiiii/SemanticShelf",
+    bullets: [
+      "Designed a semantic retrieval system over 6,810 books — Sentence-Transformers embeddings in a persistent ChromaDB vector store, ranked via cosine similarity on combined title, authors, and description fields",
+      "Engineered a thread-safe recommender with LRU-cached model loading, batched indexing, deterministic ISBN IDs, and auto-rebuild on schema drift",
+    ],
+    neon: "lime",
+    orb: "oklch(0.85 0.25 145 / 0.18)",
+    ring: "glow-ring-lime",
+    border: "hover:border-neon-lime",
+    label: "text-neon-lime",
+    dot: "bg-[oklch(0.85_0.25_145)]",
+    pulse: "animate-neon-pulse-lime",
+    shimmer: "linear-gradient(90deg, transparent, oklch(0.85 0.25 145 / 0.8), transparent)",
+    terminalBorder: "oklch(0.85 0.25 145 / 0.2)",
+    cmd: "semanticShelf.search(query)",
   },
 ];
 
@@ -74,7 +96,7 @@ export function Projects() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: i * 0.12 }}
             whileHover={{ y: -6 }}
-            className={`group relative overflow-hidden rounded-3xl glass-neon p-8 ${p.border} transition-all block ${i === 2 ? "md:col-span-2" : ""}`}
+            className={`group relative overflow-hidden rounded-3xl glass-neon p-8 ${p.border} transition-all block`}
             aria-label={`Open ${p.title} repository`}
           >
             {/* Neon orb glow */}
@@ -85,14 +107,7 @@ export function Projects() {
             {/* Neon top border shimmer on hover */}
             <div
               className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              style={{
-                background:
-                  p.neon === "cyan"
-                    ? "linear-gradient(90deg, transparent, oklch(0.87 0.22 195 / 0.8), transparent)"
-                    : p.neon === "pink"
-                      ? "linear-gradient(90deg, transparent, oklch(0.72 0.28 330 / 0.8), transparent)"
-                      : "linear-gradient(90deg, transparent, oklch(0.62 0.26 290 / 0.8), transparent)",
-              }}
+              style={{ background: p.shimmer }}
             />
 
             <div className="relative">
@@ -122,14 +137,7 @@ export function Projects() {
               {/* Neon terminal mock */}
               <div
                 className={`mt-8 rounded-xl border bg-background/60 p-4 font-mono text-[11px] text-muted-foreground ${p.pulse}`}
-                style={{
-                  borderColor:
-                    p.neon === "cyan"
-                      ? "oklch(0.87 0.22 195 / 0.2)"
-                      : p.neon === "pink"
-                        ? "oklch(0.72 0.28 330 / 0.2)"
-                        : "oklch(0.62 0.26 290 / 0.2)",
-                }}
+                style={{ borderColor: p.terminalBorder }}
               >
                 <div className="flex gap-1.5 mb-3">
                   <span className={`h-2 w-2 rounded-full ${p.dot} opacity-80`} />
