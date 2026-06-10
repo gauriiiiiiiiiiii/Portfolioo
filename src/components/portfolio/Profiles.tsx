@@ -6,7 +6,7 @@ const socials = [
   {
     icon: FileText,
     label: "Resume",
-    href: "https://drive.google.com/file/d/19qVf7kGTVGBODiCw8or7RseXU1cAoD7A/view",
+    href: "https://drive.google.com/file/d/1VQCHBaiz1XiNgzl5uzEP39b9ZMxbQyJd/view?usp=sharing",
   },
   {
     icon: Linkedin,
